@@ -1,3 +1,2 @@
 #!/bin/bash
-for ((i=0;i<26;i++)); do for ((j=0;j<26;j++)); do combination="$(echo {a..z}{a..z} | cut -c $((i+1))$((j+1)))"; [ "$combination" != "oo" ] && echo "$combination"; done; done
-
+echo {a..z}{a..z} | tr " " "\n" | grep -v "oo"
